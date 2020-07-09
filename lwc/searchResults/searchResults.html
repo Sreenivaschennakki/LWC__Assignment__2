@@ -1,0 +1,15 @@
+<!--code block to provide the list of Accounts based on the Type selected -->
+<template>
+    <template if:true={accountList.data} >
+        <div class="slds-box slds-theme_shade slds-theme_alert-texture" >
+            <template for:each={accountList.data} for:item="account">
+                <div key={account.Id} class="slds-p-top_xx-large">
+                    <c-card-component account={account} key={account.Id}></c-card-component>
+                </div>
+            </template>
+        </div>
+    </template>
+    <template if:true={accountList.error}>
+        {accountList.error}
+    </template>
+</template>

@@ -1,0 +1,14 @@
+<!--code block to dipplay the Account list by selected type -->
+<template>
+    <div class="accountCard slds-box">
+        <strong> Account Name : {account.Name}</strong><br />
+        <strong>Industry :  {account.Industry}</strong><br /> 
+        <strong>Type : {account.Type}</strong><br /> 
+        <strong>Website : {account.Website}</strong><br />
+        <strong>Account Number : {account.AccountNumber}</strong><br />
+        <br />
+
+        <lightning-button label=" Detail" variant="Brand" value={account} onclick={handledetailClick}>
+        </lightning-button>
+    </div>
+</template>

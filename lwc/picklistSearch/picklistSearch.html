@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Select Account Type" icon-name="standard:account">
+        <lightning-layout>
+            <lightning-layout-item>
+                <template if:true={picklistValues.data}>
+                    <div class="slds-m-around_medium">
+                        <lightning-combobox name="Type" label="Type" value={value} placeholder="-Select-"
+                            options={picklistValues.data.values} onchange={handleChange}>
+                        </lightning-combobox>
+                    </div>
+                </template>
+            </lightning-layout-item>
+            <lightning-layout-item>
+                <div class="slds-p-top_x-large" style="margin-top: 9px;">
+                    <lightning-button variant="brand" label="Search" title="search action" onclick={handleClick}
+                        class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
